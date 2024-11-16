@@ -29,6 +29,10 @@
             <groupId>com.tan.store</groupId>
             <artifactId>shop-login</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.tan.store</groupId>
+            <artifactId>shop-repo</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

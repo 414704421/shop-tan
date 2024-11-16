@@ -10,11 +10,13 @@
         <option value="$PROJECT_DIR$/main/pom.xml" />
         <option value="$PROJECT_DIR$/shop-main/pom.xml" />
         <option value="$PROJECT_DIR$/shop-login/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-repo/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/login/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-dependencies/pom.xml" />
       </set>
     </option>
   </component>

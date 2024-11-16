@@ -2,10 +2,8 @@ package com.tan.store.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
-@ComponentScan(basePackages = "com.tan.store.*")
+@SpringBootApplication(scanBasePackages = "com.tan.store.*")
 public class MainApplication {
 
     public static void main(String[] args) {

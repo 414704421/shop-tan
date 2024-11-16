@@ -7,13 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shop-tan" />
+        <module name="shop-repo" />
         <module name="shop-login" />
         <module name="shop-main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="login" target="21" />
+      <module name="shop-dependencies" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -22,7 +23,8 @@
       <module name="shop-dependencies" options="" />
       <module name="shop-login" options="-parameters" />
       <module name="shop-main" options="-parameters" />
-      <module name="shop-tan" options="-parameters" />
+      <module name="shop-repo" options="-parameters" />
+      <module name="shop-tan" options="" />
     </option>
   </component>
 </project>
