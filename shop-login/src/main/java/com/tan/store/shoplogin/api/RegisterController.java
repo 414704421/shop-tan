@@ -1,7 +1,7 @@
 package com.tan.store.shoplogin.api;
 
-import com.tan.store.shoplogin.model.CommonResponse;
-import com.tan.store.shoplogin.model.entity.UserInfo;
+import com.tan.store.model.BaseResponse;
+import com.tan.store.model.login.UserInfo;
 import com.tan.store.shoprepo.dao.UserInfoDao;
 import com.tan.store.shoprepo.pojo.UserInfoPojo;
 import jakarta.annotation.Resource;
@@ -17,8 +17,8 @@ public class RegisterController {
     UserInfoDao userInfoDao;
 
     @RequestMapping("register")
-    public CommonResponse register(@RequestBody UserInfo userInfo) throws Exception {
-        CommonResponse response = new CommonResponse();
+    public BaseResponse register(@RequestBody UserInfo userInfo) throws Exception {
+        BaseResponse response = new BaseResponse();
         UserInfoPojo userInfoPojo = new UserInfoPojo();
         userInfoPojo.setUserName(userInfo.getUserName());
         userInfoPojo.setPassWord(userInfo.getPassWord());

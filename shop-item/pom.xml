@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>shop-common</artifactId>
+    <artifactId>shop-item</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -19,8 +19,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
+            <groupId>com.tan.store</groupId>
+            <artifactId>shop-common</artifactId>
         </dependency>
     </dependencies>
 

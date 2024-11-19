@@ -20,9 +20,13 @@ public class RedisUtil implements ApplicationContextAware {
         RedisUtil.redisTemplate = applicationContext.getBean(StringRedisTemplate.class);
     }
 
-    public  boolean put(String key, String value) {
+    public boolean setWithExpire(String key, String value, Long seconds) {
+        return setWithExpire(key, value, seconds, TimeUnit.SECONDS);
+    }
+
+    public  boolean setWithExpire(String key, String value, Long expire, TimeUnit timeUnit) {
         try {
-            redisTemplate.opsForValue().set(key, value);
+            redisTemplate.opsForValue().set(key, value,expire, timeUnit);
         } catch (Exception e) {
             log.error(e.getMessage(),e);
             return false;
@@ -30,14 +34,12 @@ public class RedisUtil implements ApplicationContextAware {
         return true;
     }
 
-    public  boolean putExpire(String key, String value, long expire) {
-        try {
-            redisTemplate.opsForValue().set(key, value,expire, TimeUnit.SECONDS);
-        } catch (Exception e) {
-            log.error(e.getMessage(),e);
-            return false;
-        }
-        return true;
+    public String get(String key) {
+        return redisTemplate.opsForValue().get(key);
+    }
+
+    public boolean delKey(String key) {
+        return Boolean.TRUE.equals(redisTemplate.delete(key));
     }
 
 }

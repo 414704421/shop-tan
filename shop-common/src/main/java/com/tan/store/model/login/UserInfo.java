@@ -1,4 +1,4 @@
-package com.tan.store.shoplogin.model.entity;
+package com.tan.store.model.login;
 
 import lombok.Data;
 

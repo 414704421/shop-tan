@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="shop-repo" />
         <module name="shop-common" />
+        <module name="shop-item" />
         <module name="shop-login" />
         <module name="shop-main" />
       </profile>
@@ -23,6 +24,7 @@
       <module name="login" options="-parameters" />
       <module name="shop-common" options="-parameters" />
       <module name="shop-dependencies" options="" />
+      <module name="shop-item" options="-parameters" />
       <module name="shop-login" options="-parameters" />
       <module name="shop-main" options="-parameters" />
       <module name="shop-repo" options="-parameters" />

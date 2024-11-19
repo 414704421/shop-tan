@@ -19,6 +19,7 @@
         <module>shop-login</module>
         <module>shop-main</module>
         <module>shop-repo</module>
+        <module>shop-item</module>
     </modules>
 
     <properties>
@@ -72,6 +73,16 @@
                 <groupId>com.tan.store</groupId>
                 <artifactId>shop-common</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tan.store</groupId>
+                <artifactId>shop-item</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>3.3.5</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
