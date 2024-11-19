@@ -9,11 +9,17 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
     <groupId>com.tan.store</groupId>
     <artifactId>shop-tan</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>shop-common</module>
+        <module>shop-login</module>
+        <module>shop-main</module>
+        <module>shop-repo</module>
+    </modules>
 
     <properties>
         <java.version>21</java.version>
@@ -23,10 +29,23 @@
 
     <dependencyManagement>
         <dependencies>
+<!--            <dependency>-->
+<!--                <groupId>com.speedment</groupId>-->
+<!--                <artifactId>runtime</artifactId>-->
+<!--                <version>3.0.1</version>-->
+<!--            </dependency>-->
+            <!-- springboot3 导入以下依赖 -->
             <dependency>
-                <groupId>com.speedment</groupId>
-                <artifactId>runtime</artifactId>
-                <version>3.0.1</version>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+                <version>3.5.7</version>
+            </dependency>
+
+            <!-- springboot2 导入以下依赖 -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.7</version>
             </dependency>
             <!-- MySQL JDBC 驱动 -->
             <dependency>
@@ -49,6 +68,11 @@
                 <artifactId>shop-main</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.tan.store</groupId>
+                <artifactId>shop-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -61,6 +85,10 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
 
@@ -77,11 +105,6 @@
                         </exclude>
                     </excludes>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.speedment</groupId>
-                <artifactId>speedment-maven-plugin</artifactId>
-                <version>${speedment.version}</version>
             </plugin>
         </plugins>
     </build>

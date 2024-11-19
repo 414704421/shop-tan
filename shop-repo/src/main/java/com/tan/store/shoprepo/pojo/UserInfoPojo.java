@@ -12,5 +12,5 @@ public class UserInfoPojo {
     private String nick;
     private String headPic;
     private Date gmtCreated;
-    private Date gmtUpdated;
+    private Date gmtUpdate;
 }

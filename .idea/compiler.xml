@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="shop-repo" />
+        <module name="shop-common" />
         <module name="shop-login" />
         <module name="shop-main" />
       </profile>
@@ -20,6 +21,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="login" options="-parameters" />
+      <module name="shop-common" options="-parameters" />
       <module name="shop-dependencies" options="" />
       <module name="shop-login" options="-parameters" />
       <module name="shop-main" options="-parameters" />

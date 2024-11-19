@@ -6,9 +6,39 @@
 
     <insert id="insert" parameterType="com.tan.store.shoprepo.pojo.UserInfoPojo">
         insert into user_info
-            (id,user_name,pass_word,nick,head_pic,gmt_created,gmt_updated)
+            (id,user_name,pass_word,nick,head_pic,gmt_created,gmt_update)
         values
-            (#{id},#{userName},#{passWord},#{nick},#{headPic},#{gmtCreated},#{gmtUpdated})
+            (#{id},#{userName},#{passWord},#{nick},#{headPic},#{gmtCreated},#{gmtUpdate})
     </insert>
+
+    <select id="selectByParam"
+            parameterType="com.tan.store.shoprepo.pojo.UserInfoPojo"
+            resultType="com.tan.store.shoprepo.pojo.UserInfoPojo">
+        SELECT
+            id,user_name AS userName,pass_word AS passWord,nick,head_pic AS headPic,gmt_created AS gmtCreated,gmt_update AS gmtUpdate
+        FROM user_info
+        WHERE 1=1
+        <if test="id != null">
+            AND id = #{id}
+        </if>
+        <if test="userName != null">
+            AND user_name LIKE CONCAT('%', #{userName}, '%')
+        </if>
+        <if test="passWord != null">
+            AND pass_word = #{passWord}
+        </if>
+        <if test="nick != null">
+            AND nick LIKE CONCAT('%', #{nick}, '%')
+        </if>
+        <if test="headPic != null">
+            AND head_pic = #{headPic}
+        </if>
+        <if test="gmtCreated != null">
+            AND gmt_created >= #{gmtCreated}
+        </if>
+        <if test="gmtUpdate != null">
+            AND #{gmtUpdate} >= gmt_update
+        </if>
+    </select>
 
 </mapper>
